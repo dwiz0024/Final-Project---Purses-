@@ -1,4 +1,4 @@
-##Final Project Proposal
+FINAL PROJECT PROPOSAL
 
 **Title:** PursePal
 
