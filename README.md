@@ -1,4 +1,6 @@
-FINAL PROJECT PROPOSAL
+# PursePal: Amelia and Desayna's Final Project
+
+## Final Project Proposal
 
 **Title:** PursePal
 
@@ -18,3 +20,17 @@ FINAL PROJECT PROPOSAL
 - Michael Kors website: https://www.michaelkors.com/women/handbags/
 - ChatGPT
 - HTML online editor: https://www.w3schools.com/html/html_editor.asp
+
+## Project Overview
+
+## Usage Guidelines
+
+## Dependencies
+
+## Project Structure
+
+## Collaboration Information
+
+## Acknowledgements
+
+## Reflection
