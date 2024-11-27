@@ -21,16 +21,16 @@ def get_purses():
 
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    # Find the product elements in the page (you may need to adjust these selectors)
+    # Finds purse details from Michael Kors website
     products = soup.find_all('div', class_='product-item')  # Adjust the class name
 
     purse_list = []
     
     for product in products:
-        # Extract product details (you may need to adjust the HTML structure based on the website)
-        name = product.find('h2', class_='product-title').text.strip()  # Adjust tag/class
-        price = product.find('span', class_='price').text.strip()  # Adjust tag/class
-        image_url = product.find('img')['src']  # Extract image URL
+        # Extracts purse details from Michael Kors website
+        name = product.find('h2', class_='product-title').text.strip()  # Extracts purse names
+        price = product.find('span', class_='price').text.strip()  # Extracts purse prices
+        image_url = product.find('img')['src']  # Extracts purse image URLs
 
         purse_list.append(Product(name=name, price=price, image_url=image_url))
 
