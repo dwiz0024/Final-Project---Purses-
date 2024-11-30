@@ -33,6 +33,7 @@ Our project depends on several external tools including:
 - Libraries:
     - fastapi
     - beautifulsoup4
+    - uvicorn
     - pydantic (BaseModel class)
     - requests
     - typing
