@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc;  
+    /* Beige background for a subtle MK look */
+    color: #3e2723; /* Dark brown text */
+}
+header {
+    background-color: #795548; /* Warm medium brown */
+    color: #fff; /* White text */
+    padding: 1rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav a {
+    color: #d7ccc8; /* Light brown link */
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #ffccbc; /* Light peach highlight */
+}
+
+/* Styles for the main content */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: slideIn 1.5s ease;
+}
+/* Product Card Styles */
+.product-card {
+    border: 1px solid #8d6e63; /* Brown border */
+    border-radius: 8px;
+    background-color: #efebe9; /* Light cream */
+    width: 200px;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    animation: fadeIn 1s ease;
+}
+/* Added in an animation to enhance the page */
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #8d6e63;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #5d4037; /* Rich brown */
+}
+
+.product-card p {
+    margin: 0.5rem 0;
+}
+
+.product-card button {
+    background-color: #795548; /* Medium brown */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card button:hover {
+    background-color: #5d4037; /* Darker brown */
+    transform: scale(1.1);
+}
+
+/* Cart Section */
+#cart-items {
+    margin: 2rem;
+    text-align: left;
+    animation: fadeIn 1s ease;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #8d6e63;
+}
+
+#cart-total {
+    font-weight: bold;
+    color: #3e2723;
+}
+
+/* Footer */
+footer {
+    background-color: #3e2723; /* Deep brown */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Added in features for animations */
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
