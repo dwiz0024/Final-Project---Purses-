@@ -1,0 +1,45 @@
+{
+    "products": [
+      {
+        "name": "Empire Medium Metallic Chain-Link Pochette",
+        "price": 198
+      },
+      {
+        "name": "Scarlett Medium Signature Logo Satchel",
+        "price": 298
+      },
+      {
+        "name": "Marilyn Medium Logo Stripe Satchel",
+        "price": 228
+      },
+      {
+        "name": "Jet Set Charm Small Logo Pochette",
+        "price": 198
+      },
+      {
+        "name": "Bedford Travel Extra-Large Signature Logo Stripe Weekender Bag",
+        "price": 398
+      },
+      {
+        "name": "Marilyn Small Logo Crossbody Bag",
+        "price": 258
+      },
+      {
+        "name": "Jet Set Small Logo Print Woven Smartphone Crossbody Bag",
+        "price": 128
+      },
+      {
+        "name": "Large Logo Continental Wallet",
+        "price": 178
+      },
+      {
+        "name": "Adele Logo Smartphone Wallet",
+        "price": 128
+      },
+      {
+        "name": "Taryn Large Signature Logo and Leather Tote Bag",
+        "price": 298
+      }
+    ]
+  }
+  
