@@ -33,9 +33,10 @@ header nav a:hover {
 
 /* Styles for the main content */
 main {
-    padding: 2rem;
+    padding: 2rem 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem
     justify-content: center;
     animation: slideIn 1.5s ease;
 }
@@ -52,6 +53,11 @@ main {
     animation: fadeIn 1s ease;
 }
 /* Added in an animation to enhance the page */
+
+.product-card {
+    flex: 1 1 calc(25% - 2rem); /* Adjust card width dynamically */
+    box-sizing: border-box; /* Ensure padding and borders don't overflow */
+}
 
 .product-card:hover {
     transform: scale(1.05);
@@ -87,6 +93,10 @@ main {
 .product-card button:hover {
     background-color: #5d4037; /* Darker brown */
     transform: scale(1.1);
+}
+
+header, footer, main {
+    padding: 1rem 2rem;
 }
 
 /* Cart Section */
@@ -144,3 +154,5 @@ footer {
         opacity: 1;
     }
 }
+
+
