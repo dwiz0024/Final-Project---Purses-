@@ -37,9 +37,6 @@ Our project depends on several external tools including:
     - pydantic (BaseModel class)
     - requests
     - typing
-    - base64
-    - os
-    - json
 - APIs:
     - FastAPI
 - Websites:
