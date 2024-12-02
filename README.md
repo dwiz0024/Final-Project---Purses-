@@ -2,7 +2,7 @@
 
 ## Final Project Proposal
 
-**Title:** PursePal
+**Title:** AD's Michael Kors PopUp
 
 **Members:** Amelia Soucy and Desayna Christmas 
 
@@ -13,13 +13,17 @@
     - HTML pages, CSS Styling, JavaScript demo
     - Amazon example
     - API example
+    - FastAPI examples
 - Homeworks:
-    - Homework – Web
-    - Homework – SQL
+    - Homework - Python Programming 1
+    - Homework - Python Programming 2
     - Homework – API
-- Michael Kors website: https://www.michaelkors.com/women/handbags/
+    - Homework – Web
 - ChatGPT
+- GitHub support pages
+- Michael Kors website: https://www.michaelkors.com/women/handbags/
 - HTML online editor: https://www.w3schools.com/html/html_editor.asp
+- Meeting with Professor Li via WebEx and asking Professor Li questions via Slack
 
 ## Project Overview
 
@@ -31,16 +35,18 @@ The purpose of our web application is to serve as a platform for users to easily
 
 Our project depends on several external tools including:
 - Libraries:
-    - fastapi
-    - beautifulsoup4
+    - fastapi (FastAPI and Request classes)
+    - fastapi.responses (HTMLResponse class)
+    - fastapi.exceptions (HTTPException class)
+    - json
     - uvicorn
+    - bs4 (BeautifulSoup class)
     - pydantic (BaseModel class)
     - requests
-    - typing
-- APIs:
-    - FastAPI
+    - typing (List class)
 - Websites:
     - Michael Kors website: https://www.michaelkors.com/women/handbags/
+    - External links to purse images
 
 ## Project Structure
 

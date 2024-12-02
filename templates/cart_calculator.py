@@ -1,22 +1,17 @@
+from fastapi import FastAPI
 import json
-import urllib.request
 
+app = FastAPI()
 
+@app.get("/cart")
 def cart_calculator():
     """
-    Calculates total price of items (purses) added to customer's cart.
+    Uses FastAPI to calculate the total price of purses added to customer's cart.
     """
-    URL = 
-    with urllib.request.urlopen(URL) as response:
-        data = response.read()
-        data = json.loads(data)
-        price_in_usd = float(data["bpi"]["USD"]["rate_float"])
-        return price_in_usd
-
-
-def main():
-    print(cart_calculator())
-
-
-if __name__ == "__main__":
-    main()
+    # Opens and loads local data.json file
+    with open('data.json', 'r') as file:
+        data = json.load(file)  # Reads JSON data from data.json file
+        
+    # Provides total price of purses added to customer's cart in U.S. Dollars
+    total_price = float(data["bpi"]["USD"]["rate_float"])
+    return {"total_price": total_price}
