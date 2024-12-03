@@ -1,4 +1,5 @@
 # AD's Michael Kors PopUp
+*By Amelia Soucy and Desayna Christmas*
 
 ## Project Proposal
 *Title:* AD's Michael Kors PopUp
@@ -35,8 +36,6 @@ Users can browse through our limited inventory of hand selected bags, read the d
 Libraries:
 - fastapi (FastAPI and Request classes)
 - fastapi.responses (HTMLResponse class)
-- fastapi.templating (Jinja2Templates class)
-- fastapi.staticfiles (StaticFiles class)
 - fastapi.exceptions (HTTPException class)
 - os
 - json 
