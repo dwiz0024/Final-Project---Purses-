@@ -1,55 +1,43 @@
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from fastapi import Request
+import os
 import json
 
-app = FastAPI()
+def save_total_price():
+    # You should define this function to handle the saving of an empty cart or default cart data
+    cart_data = {"items": []}  # Default empty cart, can be adjusted as needed
+    with open("data/data.json", "w") as file:
+        json.dump(cart_data, file)
 
-templates = Jinja2Templates(directory="templates")
-
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-@app.get("/", response_class=HTMLResponse)
-def get_home(request: Request):
-    return templates.TemplateResponse("cart.html", {"request": request})
-
-@app.get("/cart")
 def cart_calculator():
     """
     Calculates the total price of items in the cart.
     """
     try:
-        with open('data.json', 'r') as file:
-            cart_data = json.load(file)
-    except FileNotFoundError:
-        return {"error": "Cart file not found."}
-    except json.JSONDecodeError:
-        return {"error": "Error reading cart data."}
+        if os.path.exists("data/data.json"):
+            with open("data/data.json", "r") as file:
+                cart_data = json.load(file)
 
-    total_price = 0.0
+            # Ensure we have items in the cart, and calculate the total price
+            if "items" in cart_data and isinstance(cart_data["items"], list):
+                total_price = 0.0
+                for item in cart_data["items"]:
+                    # Assuming each item has 'price' and 'quantity'
+                    price = item.get("price", 0.0)
+                    quantity = item.get("quantity", 1)
+                    total_price += price * quantity
+                
+                return {"total_price": total_price}
 
-    for item in cart_data["items"]:
+            else:
+                # In case the cart is empty or not in expected format
+                save_total_price()
+                return {"total_price": 0.0}
 
-        price = float(item.get("price", 0))
-        quantity = int(item.get("quantity", 1))
-        
-        total_price += price * quantity
-
-    return {"total_price": total_price}
-
-
-
-def load_bitcoins():
-    """Load bitcoin data from JSON file or create new if doesn't exist"""
-    global bitcoins
-    try:
-        if os.path.exists("data/bitcoins.json"):
-            with open("data/bitcoins.json", "r") as file:
-                bitcoins = json.load(file)
         else:
-            save_bitcoins()
-    except json.JSONDecodeError:
-        save_bitcoins()
+            # If the file doesn't exist, initialize with an empty cart
+            save_total_price()
+            return {"total_price": 0.0}
 
+    except json.JSONDecodeError:
+        # In case the JSON is malformed, reset the cart to a safe state
+        save_total_price()
+        return {"total_price": 0.0}
