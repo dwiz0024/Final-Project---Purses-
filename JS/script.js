@@ -26,7 +26,6 @@
 // }
 
 
-
 let products = [];
 fetch('data.json') // Adjust the path to your JSON file
     .then(response => response.json())
