@@ -18,14 +18,25 @@ def get_home(request: Request):
 @app.get("/cart")
 def cart_calculator():
     """
-    Uses FastAPI to calculate the total price of purses added to the customer's cart.
+    Calculates the total price of items in the cart.
     """
-    # Opens and loads local data.json file
-    with open('data.json', 'r') as file:
-        data = json.load(file)  # Reads JSON data from data.json file
+    try:
+        with open('data.json', 'r') as file:
+            cart_data = json.load(file)
+    except FileNotFoundError:
+        return {"error": "Cart file not found."}
+    except json.JSONDecodeError:
+        return {"error": "Error reading cart data."}
+
+    total_price = 0.0
+
+    for item in cart_data["items"]:
+
+        price = float(item.get("price", 0))
+        quantity = int(item.get("quantity", 1))
         
-    # Provides total price of purses added to customer's cart in U.S. Dollars
-    total_price = float(data["bpi"]["USD"]["rate_float"])
+        total_price += price * quantity
+
     return {"total_price": total_price}
 
 
