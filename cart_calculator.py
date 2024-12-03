@@ -38,3 +38,18 @@ def cart_calculator():
         total_price += price * quantity
 
     return {"total_price": total_price}
+
+
+
+def load_bitcoins():
+    """Load bitcoin data from JSON file or create new if doesn't exist"""
+    global bitcoins
+    try:
+        if os.path.exists("data/bitcoins.json"):
+            with open("data/bitcoins.json", "r") as file:
+                bitcoins = json.load(file)
+        else:
+            save_bitcoins()
+    except json.JSONDecodeError:
+        save_bitcoins()
+
