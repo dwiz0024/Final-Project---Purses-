@@ -26,24 +26,24 @@
 // }
 
 
-let products = [];
-fetch('data.json') // Adjust the path to your JSON file
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-    })
-    .catch(error => console.error('Error loading products:', error));
+// let products = [];
+// fetch('data.json') // Adjust the path to your JSON file
+//     .then(response => response.json())
+//     .then(data => {
+//         products = data;
+//     })
+//     .catch(error => console.error('Error loading products:', error));
 
-const cart = []; // Initialize an empty cart
+// const cart = []; // Initialize an empty cart
 
-function addToCart(productName) {
-    const product = products.find(item => item.name === productName);
-    if (product) {
-        cart.push(product);
-        console.log(`${product.name} added to cart.`);
-        updateCartDisplay();
-    } else {
-        console.error('Product not found');
-    }
-}
+// function addToCart(productName) {
+//     const product = products.find(item => item.name === productName);
+//     if (product) {
+//         cart.push(product);
+//         console.log(`${product.name} added to cart.`);
+//         updateCartDisplay();
+//     } else {
+//         console.error('Product not found');
+//     }
+// }
        
