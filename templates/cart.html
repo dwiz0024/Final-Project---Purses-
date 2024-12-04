@@ -12,17 +12,25 @@
     <header>
         <h1>Shopping Cart</h1>
         <nav>
-            <a href="main.html"> Home</a>
+            <a href="index.html"> Home</a>
+            <a href="cart.html">Shopping cart</a>
         </nav>
     </header>
 
     <main>
         <section id="Cart-Items">
             <h2>Your Cart</h2>
-            <ul id="Cart-List">
+            <ul>
+                {% for item in cart['items'] %}    
                 <!-- Cart items will be placed here -->
+                <li>
+                    <h3>Empire Medium Metallic Chain-Link Pochette</h3>
+                    <p>Black/Pale Gold</p>
+                    <p>Price: $198</p>
+                </li>
             </ul>
-            <p>Total: $<span id="Cart-Total">0.00</span></p>
+            <p>Total:$198 </p>
+            
         </section>
     </main>
 
