@@ -12,7 +12,7 @@
     <header>
         <h1> AD's Michael Kors PopUp</h1>
         <nav> 
-            <a href="main.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="cart.html">Shopping Cart</a>
         </nav>
     </header>
@@ -22,6 +22,7 @@
             <h2> Our Collection</h2>
             <h4> Limited Time Only!</h4>
             <div id="Products">
+                {% for product in products['products'] %}    
                 <div class="product card">
                     <img src="https://michaelkors.scene7.com/is/image/MichaelKors/32F4G8EW6B-1092_1?$large$" alt="Empire Medium Metallic Chain-Link Pochette" height="700px" width="500px"
                 </div>
