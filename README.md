@@ -32,11 +32,14 @@ Users can browse through our limited inventory of hand selected bags, read the d
 
 ## Dependencies
 Libraries:
-- fastapi (FastAPI and Request classes)
-- fastapi.responses (HTMLResponse class)
-- fastapi.exceptions (HTTPException class)
+- fastapi (FastAPI, Request, and HTTPException classes)
+- fastapi.responses (HTMLResponse, JSONResponse, and RedirectResponse classes)
+- fastapi.middleware.cors (CORSMiddleware class)
+- fastapi.staticfiles (StaticFiles class)
+- fastapi.templating (Jinja2Templates class)
 - os
 - json 
+- datetime
 
 ## Project Structure
 The main.html is the front page of our website. The cart page is also another page users can click on to view their purchase amount. The CSS and JS files connect to the html pages for styling and creating "add to cart" buttons. The cart calculator connects to the web page in order to calculate the total amount of items. The 404 error page is also connected to the webpage in order to provide a customized error screen. The JSON file stores the database of purses and their prices. 
